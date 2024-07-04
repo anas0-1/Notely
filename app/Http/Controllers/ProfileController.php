@@ -11,6 +11,15 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+      /**
+     * Display the user's dashboard.
+     */
+    public function dashboard(Request $request): View
+    {
+        return view('dashboard', [
+            'user' => $request->user(),
+        ]);
+    }
     /**
      * Display the user's dashboard.
      */
